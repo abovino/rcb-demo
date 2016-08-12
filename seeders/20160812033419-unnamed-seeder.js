@@ -3,21 +3,31 @@
 module.exports = {
   up: function (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('Categories', [{
-        name: 'Javascript',
+        title: 'Javascript',
         createdAt: new Date(),
         updatedAt: new Date()
       },{
-        name: 'HTML',
+        title: 'HTML',
         createdAt: new Date(),
         updatedAt: new Date()
       },{
-        name: 'CSS',
+        title: 'CSS',
         createdAt: new Date(),
         updatedAt: new Date()
       },{
-        name: 'Database',
+        title: 'Database',
         createdAt: new Date(),
         updatedAt: new Date()
       }], {});
+  },
+
+  down: function (queryInterface, Sequelize) {
+    /*
+      Add reverting commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.bulkDelete('Person', null, {});
+    */
   }
 };
